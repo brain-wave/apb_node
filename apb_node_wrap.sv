@@ -55,7 +55,7 @@ module apb_node_wrap
    // GENERATE SEL SIGNAL FOR MASTER MATCHING THE ADDRESS
    generate
       for(i=0;i<NB_MASTER;i++)
-        begin
+        begin : anw_1
            assign apb_masters[i].penable = penable[i];
            assign apb_masters[i].pwrite  = pwrite[i];
            assign apb_masters[i].paddr   = paddr[i];

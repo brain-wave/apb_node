@@ -59,7 +59,7 @@ module apb_node
    // GENERATE SEL SIGNAL FOR MASTER MATCHING THE ADDRESS
    generate
       for(i=0;i<NB_MASTER;i++)
-        begin
+        begin : an1
            assign psel_o[i]  =  (paddr_i >= START_ADDR_i[i]) && (paddr_i <= END_ADDR_i[i]);
         end
    endgenerate
